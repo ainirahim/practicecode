@@ -40,15 +40,9 @@ pipeline {
             }
         }
 
-        stage('Code Build') {
-            steps {
-                 sh 'mvn install -Dmaven.test.skip=false'
-            }
-        }
-
-        stage('Environment Analysis'){
+        stage('S3_9225101A'){
             parallel {
-                stage('Printing Global Variables') {
+                stage('S3_API TEST') {
                     steps {
                         sh """
                         env 
@@ -56,7 +50,7 @@ pipeline {
                     }
                 }
 
-                stage ('execute shell') {
+                stage ('S3 SCAN TEST') {
                     steps {
                         shh 'echo "Hello Student. Thanks for keeping up!"'
                     }
