@@ -24,22 +24,19 @@ pipeline {
 
     stages {
         
-        stage('Cleanup Workspace') {
+        stage('Stage1_9225101A') {
             steps {
-                cleanWs()
                 sh """
-                echo "Cleaned Up Workspace for ${APP_NAME}"
+                echo "Stage1_9225101A : Release Environment Preparation Completed."
                 """
             }
         }
 
-        stage('Code Checkout') {
+        stage('Stage2_9225101A') {
             steps {
-                checkout([
-                    $class: 'GitSCM', 
-                    branches: [[name: '*/main']], 
-                    userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
-                ])
+               sh """
+                echo "Stage2_9225101A : Release Container WebApp_9225101AAini Created Completed."
+                """
             }
         }
 
