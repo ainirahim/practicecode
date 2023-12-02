@@ -51,7 +51,7 @@ pipeline {
 
         stage('Environment Analysis'){
             parallel {
-                stage('Printing All Global Variables') {
+                stage('Printing Global Variables') {
                     steps {
                         sh """
                         env 
