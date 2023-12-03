@@ -59,7 +59,7 @@ pipeline {
                  stage ('S4_9225101A') {
                     input {
                         message "9225101A, proceed to release the work to next phase?"
-                        proceed "Stage5_9225101A : Work Release - Proceed to Next Phase"
+                        ok "Stage5_9225101A : Work Release - Proceed to Next Phase"
                     }
                      steps {
                          echo 'S5_9225101A'
