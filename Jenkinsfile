@@ -55,6 +55,13 @@ pipeline {
                         shh 'echo "Hello Student. Thanks for keeping up!"'
                     }
                 }
+
+                 stage ('S4_9225101A') {
+                    input {
+                        message "9225101A, proceed to release the work to next phase?"
+                        Proceed "Stage5_9225101A : Work Release - Proceed to Next Phase"
+                    }
+                }
                 
 
         stage('Printing All Global Variables') {
