@@ -1,6 +1,6 @@
 pipeline {
 
-    agent {
+    agent any {
         node {
             label 'master'
         }
@@ -72,16 +72,6 @@ pipeline {
                 }
                 }
                 
-
-                
-
-        stage('Printing All Global Variables') {
-            steps {
-                sh """
-                env
-                """
-            }
-        }
 
     }   
 }
