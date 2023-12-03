@@ -1,42 +1,19 @@
 pipeline {
 
-    agent {
-        node {
-            label 'master'
-        }
-    }
-
-    tools { 
-        maven 'maven3' 
-    }
-
-    options {
-        buildDiscarder logRotator( 
-                    daysToKeepStr: '15', 
-                    numToKeepStr: '10'
-            )
-    }
-
-    environment {
-        APP_NAME = "STUDENT_APP"
-        APP_ENV  = "DEV"
-    }
-
-    stages {
+    agent any
+stages {
         
         stage('Stage1_9225101A') {
             steps {
-                sh """
                 echo "Stage1_9225101A : Release Environment Preparation Completed."
-                """
+            
             }
         }
 
         stage('Stage2_9225101A') {
             steps {
-               sh """
                 echo "Stage2_9225101A : Release Container WebApp_9225101AAini Created Completed."
-                """
+        
             }
         }
 
@@ -44,15 +21,13 @@ pipeline {
             parallel {
                 stage('S3_API TEST') {
                     steps {
-                        sh """
-                        env 
-                        """
+                       echo 'Stage3_9225101A: API Test Completed'
                     }
                 }
 
                 stage ('S3 SCAN TEST') {
                     steps {
-                        echo 'Hello Student. Thanks for keeping up!'
+                        echo 'Stage3_9225101A: Scan Test Completed'
                     }
                 }
 
