@@ -68,7 +68,7 @@ pipeline {
 
                 stage ('S5_9225101A') {
                 steps {
-                    echo 'Stage5_9225101A : Work Release -Stops 
+                    echo 'Stage5_9225101A : Work Release -Stops'
                 }
                 }
                 
