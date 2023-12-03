@@ -30,6 +30,8 @@ stages {
                         echo 'Stage3_9225101A: Scan Test Completed'
                     }
                 }
+            }
+        }
 
                  stage ('S4_9225101A') {
                     input {
@@ -50,5 +52,5 @@ stages {
 
     }   
 }
-    }
-}
+    
+
