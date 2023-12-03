@@ -36,7 +36,7 @@ stages {
                  stage ('S4_9225101A') {
                     input {
                         message "9225101A, proceed to release the work to next phase?"
-                        ok "Stage5_9225101A : Work Release - Proceed to Next Phase"
+                        ok "Proceed?"
                     }
                      steps {
                          echo 'S5_9225101A'
@@ -45,7 +45,7 @@ stages {
 
                 stage ('S5_9225101A') {
                 steps {
-                    echo 'Stage5_9225101A : Work Release -Stops'
+                    echo 'Stage5_9225101A : Work Release - Proceeds to Next Phase'
                 }
                 }
                 
