@@ -52,7 +52,7 @@ pipeline {
 
                 stage ('S3 SCAN TEST') {
                     steps {
-                        shh 'echo "Hello Student. Thanks for keeping up!"'
+                        echo 'Hello Student. Thanks for keeping up!'
                     }
                 }
 
