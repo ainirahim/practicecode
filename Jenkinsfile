@@ -59,9 +59,20 @@ pipeline {
                  stage ('S4_9225101A') {
                     input {
                         message "9225101A, proceed to release the work to next phase?"
-                        Proceed "Stage5_9225101A : Work Release - Proceed to Next Phase"
+                        proceed "Stage5_9225101A : Work Release - Proceed to Next Phase"
                     }
+                     steps {
+                         echo 'S5_9225101A'
+                     }
                 }
+
+                stage ('S5_9225101A') {
+                steps {
+                    echo 'Stage5_9225101A : Work Release -Stops 
+                }
+                }
+                
+
                 
 
         stage('Printing All Global Variables') {
